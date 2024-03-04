@@ -26,7 +26,7 @@ function App() {
       {
         data.map((a,i)=>(
           <li key={i}>
-            {a.title}ddddd
+            {a.title}
           </li>
         ))
       }

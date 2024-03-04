@@ -1,5 +1,14 @@
 import { useEffect, useState } from 'react';
-import './App.css';
+import {
+  Routes,
+  Route,
+  Navigate,
+  useNavigate,
+  useLocation,
+} from 'react-router-dom';
+
+import HomePage from './pages/HomePage';
+import CommunityPage from './pages/CommunityPage';
 
 function App() {
 
@@ -23,14 +32,13 @@ function App() {
   console.log("data=", data);
 
   return (
-    <div className="App">
-      {
-        data.map((a, i) => (
-          <li key={i}>
-            {a.title}
-          </li>
-        ))
-      }
+    <div>
+      <Routes>
+        <Route element={<Layout />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/community" element={<CommunityPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }

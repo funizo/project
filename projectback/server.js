@@ -3,11 +3,12 @@ var cors = require('cors');
 const app = express();
 app.use(express.json());
 app.use(cors());
+require('dotenv').config() ;
 
 const { MongoClient } = require('mongodb');
 
 let db;
-const url = 'mongodb+srv://dogdog:roqkf159753@kimsejun.yuliqcu.mongodb.net/?retryWrites=true&w=majority&appName=kimsejun'
+const url = process.env.DB_URL;
 new MongoClient(url).connect().then((client)=>{
   console.log('DB연결성공');
   db = client.db('project1');

@@ -37,10 +37,11 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route element={<Layout />} />
-        <Route path="/" element={<HomePage />} />
+      <Route element={<Layout />}>
+        <Route index element={<HomePage />} />
         <Route path="/community" element={<CommunityPage />} />
         <Route path="*" element={<NotFoundPage />} />
+      </Route>
       </Routes>
     </div>
   );

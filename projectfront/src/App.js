@@ -9,6 +9,9 @@ import {
 
 import HomePage from './pages/HomePage';
 import CommunityPage from './pages/CommunityPage';
+import Layout from './components/layout/Layout'
+import NotFoundPage from './pages/NotFoundPage';
+
 
 function App() {
 
@@ -34,10 +37,11 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route element={<Layout />} />
-        <Route path="/" element={<HomePage />} />
+      <Route element={<Layout />}>
+        <Route index element={<HomePage />} />
         <Route path="/community" element={<CommunityPage />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
       </Routes>
     </div>
   );

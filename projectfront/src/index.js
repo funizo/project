@@ -9,11 +9,13 @@ import {
 
 import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
+import CommunityPage from './pages/CommunityPage';
 
 const router = createBrowserRouter([
   {
     path: '/', element: <App />, children: [
       { path: '/', element: <HomePage /> },
+      { path: '/community', element: <CommunityPage /> },
       { path: '*', element: <NotFoundPage /> }
     ]
   }

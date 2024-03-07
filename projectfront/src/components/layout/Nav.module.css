@@ -1,0 +1,50 @@
+body {
+  margin: 0px;
+}
+
+.navbar {
+  background-color: #6766a3;
+  width: 100dvw;
+  height: 7dvh;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  margin-right: 200px;
+}
+.navbar a {
+  text-decoration: none;
+  margin-left: 15%;
+  color: #eee;
+  font-size: 30px;
+}
+.navbar p {
+  color: #eee;
+}
+.navbar p:hover {
+  color: black;
+  cursor: pointer;
+}
+.navbar img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.navbar button {
+  background-color: transparent;
+  border: none;
+}
+.navbar input {
+  background-color: rgb(55, 65, 81);
+  border: none;
+  color: #eee;
+  outline: none;
+}
+.navbar .searchBar {
+  background-color: rgb(55, 65, 81);
+  padding: 10px 20px 10px 20px;
+  border-radius: 40px;
+}/*# sourceMappingURL=Nav.module.css.map */

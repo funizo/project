@@ -12,6 +12,7 @@ export default function Nav() {
                 <button>🔍</button>
                 <input type="text" placeholder="검색" />
             </div>
+            <p>로그인/회원가입</p>
             <img src={process.env.PUBLIC_URL + '/img/ping.png'} alt="dd" />
         </div>
     )

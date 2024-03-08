@@ -46,32 +46,30 @@
         .Post {
             background-color: green;
 
-            .PostStateTop {
-                background-color: aqua;
-
-            }
-
-            // .PostStateMid {
-            // className 형식(탑, 미드, 바텀)을 맞추기 위해 명명.
-            // }
-
-            .PostStateBottom {
-                display: flex;
-                justify-content: space-between;
-
-                .PostStateDetail {
-                    background-color: pink;
-                }
-            }
         }
 
+        .PostStateTop {
+            background-color: aqua;
 
+        }
+
+        // .PostStateMid {
+        // }
+
+        .PostStateBottom {
+            display: flex;
+            justify-content: space-between;
+
+            .PostStateDetail {
+                background-color: pink;
+            }
+        }
     }
 
     .PageControl {
         background-color: blue;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
 
         & button {
             cursor: pointer;

@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+}
+
+.Main {
+    background-color: red;
+
+    display: flex;
+    flex-direction: column;
+    margin: 0 15dvw;
+
+    height: 90dvh;
+
+    .Banner {
+        background-color: grey;
+
+        border: 1px solid white;
+        border-radius: 15px;
+
+        height: 10dvh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .PostOptions {
+        background-color: orange;
+
+        height: 8dvh;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & button {
+            border: none;
+            cursor: pointer;
+        }
+
+    }
+
+    .PostSectionControl {
+        background-color: yellow;
+
+        height: 8dvh;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .PostSection {
+        border: 2px solid black;
+        // 여러개의 포스트가 나올경우 유동적으로 높이 조절하게끔 만들기.
+
+        .Post {
+            background-color: green;
+            border: 1px solid white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            gap: 10px 0px;
+
+            .PostStateTop {
+                background-color: aqua;
+                height: 25%
+            }
+
+            .PostStateMid {
+                height: 50%;
+
+            }
+
+            .PostStateBottom {
+                background-color: pink;
+
+                display: flex;
+                justify-content: space-between;
+
+                height: 25%;
+
+
+            }
+        }
+
+
+    }
+
+    .PageControl {
+        justify-self: end;
+
+        .PageControlBox {
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+        }
+
+        & button {
+            cursor: pointer;
+        }
+    }
+}

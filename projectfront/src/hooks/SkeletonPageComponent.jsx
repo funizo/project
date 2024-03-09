@@ -1,26 +1,26 @@
-import styles from './PageComponent.module.scss'
+import styles from './SkeletonPageComponent.module.scss'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
-function PostOptions({newpost, ...section}) {
+function PostOptions({ ...section }) {
     const navigate = useNavigate();
 
     return (
         <>
-            <Link to='/newpost' style={{ textDecoration: 'none' }}>작성하기</Link >
-            <Link to='/community' style={{ textDecoration: 'none' }}>전체 보기</Link>
-            <Link to='/freetopic' style={{ textDecoration: 'none' }}>자유 주제</Link>
-            <Link to='/gathering' style={{ textDecoration: 'none' }}>모임&스터디</Link>
+            <Link to={`/newpost`} style={{ textDecoration: 'none' }}>작성하기</Link >
+            <Link to={`/community`} style={{ textDecoration: 'none' }}>전체 보기</Link>
+            <Link to={`/free`} style={{ textDecoration: 'none' }}>자유 주제</Link>
+            <Link to={`/gathering`} style={{ textDecoration: 'none' }}>모임&스터디</Link>
             <button>🗃️ 게시글 필터</button>
         </>
     )
 }
 
 function Post() {
-    const [categoryTag, setCategoryTage] = useState('카테고리태그')
+    const [categoryTag, setCategoryTag] = useState('카테고리태그')
     const [postWriterName, setPostWriterName] = useState('글쓴이')
     const [postWrittenTime, setPostWrittenTime] = useState('작성 시간')
-    const [postTtitle, setPostTitle] = useState('글 제목')
+    const [postTitle, setPostTitle] = useState('글 제목')
     const [views, setViews] = useState(0)
     const [comments, setComments] = useState(0)
     const [likes, setLikes] = useState(0)
@@ -33,7 +33,7 @@ function Post() {
                     <p>{postWriterName} {postWrittenTime}</p>
                 </div>
                 <div className={styles.PostStateMid}>
-                    <h3>{postTtitle}</h3>
+                    <h3>{postTitle}</h3>
                 </div>
                 <div className={styles.PostStateBottom}>
                     <p className={styles.PostTag}>카테고리태그{categoryTag}</p>
@@ -46,7 +46,7 @@ function Post() {
     )
 }
 
-export default function PageComponent({mainCategory, description}) {
+export default function PageComponent({ mainCategory, description, ...options }) {
     const [totalPage, setTotalPage] = useState(0)
     const [currentPage, setCurrentPage] = useState(0)
 
@@ -58,7 +58,7 @@ export default function PageComponent({mainCategory, description}) {
                 {/* <img /> */}
             </div>
             <div className={styles.PostOptions}>
-                <PostOptions />
+                <PostOptions options={options} />
             </div>
             <div className={styles.PostSectionControl}>
                 <button>🔄️</button>

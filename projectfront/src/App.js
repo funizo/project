@@ -15,24 +15,24 @@ import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
 
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch('http://localhost:8080/list');
-        const result = await res.json();
-        console.log(result);
-        setData(result);
-      } catch (err) {
-        console.log(err);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const res = await fetch('http://localhost:8080/list');
+  //       const result = await res.json();
+  //       console.log(result);
+  //       setData(result);
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
-  console.log("data=", data);
+  // console.log("data=", data);
 
   return (
     <div>

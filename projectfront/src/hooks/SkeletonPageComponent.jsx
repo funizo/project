@@ -1,16 +1,17 @@
 import styles from './SkeletonPageComponent.module.scss'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
-
-function PostOptions({ ...section }) {
-    const navigate = useNavigate();
+{/* <Link to={`/newpost`} style={{ textDecoration: 'none' }}>작성하기</Link >
+            <Link to={`/community`} style={{ textDecoration: 'none' }}>전체 보기</Link>
+            <Link to={`/free`} style={{ textDecoration: 'none' }}>자유 주제</Link>
+            <Link to={`/gathering`} style={{ textDecoration: 'none' }}>모임&스터디</Link> */}
+function PostOptions({ options }) {
 
     return (
         <>
-            <Link to={`/newpost`} style={{ textDecoration: 'none' }}>작성하기</Link >
-            <Link to={`/community`} style={{ textDecoration: 'none' }}>전체 보기</Link>
-            <Link to={`/free`} style={{ textDecoration: 'none' }}>자유 주제</Link>
-            <Link to={`/gathering`} style={{ textDecoration: 'none' }}>모임&스터디</Link>
+            {options && options.map((v, index) => (
+                <Link to={`${v.link}`} style={{ textDecoration: 'none' }}>{v.section}</Link>
+            ))}
             <button>🗃️ 게시글 필터</button>
         </>
     )
@@ -36,7 +37,7 @@ function Post() {
                     <h3>{postTitle}</h3>
                 </div>
                 <div className={styles.PostStateBottom}>
-                    <p className={styles.PostTag}>카테고리태그{categoryTag}</p>
+                    <p className={styles.PostTag}>{categoryTag}</p>
                     <div className={styles.PostStateDetail}>
                         <p>👁️‍🗨️{views} 📄{comments} 👍{likes}</p>
                     </div>
@@ -46,7 +47,7 @@ function Post() {
     )
 }
 
-export default function PageComponent({ mainCategory, description, ...options }) {
+export default function SkeletonPageComponent({ mainCategory, description, options }) {
     const [totalPage, setTotalPage] = useState(0)
     const [currentPage, setCurrentPage] = useState(0)
 
@@ -63,7 +64,6 @@ export default function PageComponent({ mainCategory, description, ...options })
             <div className={styles.PostSectionControl}>
                 <button>🔄️</button>
                 <input placeholder='🔎게시글 검색' />
-                {/* 상단의 pagecontrol 부분은 과연 필요한지 모르겠음. 유저 플로우는 아래로 향함. */}
                 <div className={styles.PageControl}>
                     <div className={styles.PageControlBox}>
                         <button>◀️</button>

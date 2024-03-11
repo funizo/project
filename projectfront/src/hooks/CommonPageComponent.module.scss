@@ -1,0 +1,31 @@
+.Post {
+    background-color: green;
+    border: 1px solid white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    gap: 10px 0px;
+
+    .PostStateTop {
+        background-color: aqua;
+        height: 25%
+    }
+
+    .PostStateMid {
+        height: 50%;
+
+    }
+
+    .PostStateBottom {
+        background-color: pink;
+
+        display: flex;
+        justify-content: space-between;
+
+        height: 25%;
+
+
+    }
+}

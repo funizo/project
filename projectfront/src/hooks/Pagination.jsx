@@ -21,7 +21,7 @@ export default function Pagination({ totalItems, itemCountPerPage, pageCount, cu
         <div className={styles.wrapper}>
             <ul>
                 <li className={`${styles.move} ${noPrevPage && styles.invisible}`}>
-                    <Link to={`?page=${start - 1}`}>이전</Link>
+                    <Link to={`?page=${start - 1}`}>이전</Link> // start를 기준으로 -1씩 하므로 이전 그룹의 마지막 페이지로 이동.
                 </li>
                 {[...Array(pageCount)].map((_, i) => (
                     <>

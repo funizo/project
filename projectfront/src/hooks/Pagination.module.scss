@@ -36,7 +36,7 @@ li {
   border: solid 1px #aaa;
 }
 
-.icon, .move:last-child::after, .move:first-child::before {
+.move:last-child::after, .move:first-child::before {
   position: absolute;
   font-size: 20px;
   padding: 0 7px 0px;

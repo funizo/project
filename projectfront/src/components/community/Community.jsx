@@ -7,17 +7,15 @@ import { useSearchParams } from 'react-router-dom';
 export default function Community() {
     const [searchParams, setSearchParams] = useSearchParams();
     const page = searchParams.get('page');
-    // const [totalPage, setTotalPage] = useState(0)
-    // const [currentPage, setCurrentPage] = useState(page)
 
     const mainCategory = '커뮤니티'
     const description = '자유롭게 의견을 교환해 보세요.'
 
     const navPaths = [
-        { link: '/community', section: '전체보기', linkOption: 'reloadDocument' },
-        { link: '/community/newpost', section: '새 글 쓰기' },
-        { link: '/community/free', section: '자유 주제' },
-        { link: '/community/gathering', section: '모임&스터디' },
+        { path: '/community', section: '전체보기' },
+        { path: '/community/newpost', section: '새 글 쓰기' },
+        { path: '/community/free', section: '자유 주제' },
+        { path: '/community/gathering', section: '모임&스터디' },
     ];
 
     return (
@@ -31,7 +29,7 @@ export default function Community() {
                 <Nav paths={navPaths} />
             </div>
             <div className={styles.PostSectionControl}>
-                <button>🔄️{page}</button>
+                <button onClick={() => window.location.replace('/community')}>🔄️</button>
                 <input placeholder='🔎게시글 검색' />
                 <div className={styles.PageControl}>
                     <div className={styles.PageControlBox}>
@@ -42,16 +40,17 @@ export default function Community() {
                 </div>
             </div>
             <div className={styles.PostSection}>
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
+            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
+            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
+            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
+            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
+            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
+            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
+            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
+            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
+            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
+            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
+            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
             </div>
             <Pagination
                 totalItems={100}

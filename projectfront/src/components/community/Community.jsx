@@ -1,7 +1,6 @@
 import styles from './Community.module.scss';
-import { Post, Nav } from "../../hooks/CommonPageComponent"
 import { useState, useEffect } from "react";
-import Pagination from '../../hooks/Pagination';
+import { PostNav, Post, Pagination } from '../../hooks';
 import { useSearchParams } from 'react-router-dom';
 
 export default function Community() {
@@ -28,7 +27,7 @@ export default function Community() {
                 {/* <img /> */}
             </div>
             <div className={styles.PostNav}>
-                <Nav paths={navPaths} />
+                <PostNav paths={navPaths} />
             </div>
             <div className={styles.PostSectionControl}>
                 <button>🔄️{page}</button>

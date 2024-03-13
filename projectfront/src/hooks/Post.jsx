@@ -1,25 +1,7 @@
-import styles from './CommonPageComponent.module.scss'
-import { Link } from 'react-router-dom'
+import styles from './Post.module.scss'
 import { useState } from 'react'
 
-function Nav({ paths }) {
-
-    return (
-        <>
-            {paths && paths.map((v, index) => (
-                <ul>
-                    <li>
-                        <Link to={v.link} style={{ textDecoration: 'none' }}>{v.section}</Link>
-                    </li>
-                </ul >
-            ))
-            }
-            <button>🗃️ 게시글 필터</button>
-        </>
-    )
-}
-
-function Post() {
+export default function Post() {
     const [categoryTag, setCategoryTag] = useState('카테고리태그')
     const [postWriterName, setPostWriterName] = useState('글쓴이')
     const [postWrittenTime, setPostWrittenTime] = useState('작성 시간')
@@ -48,5 +30,3 @@ function Post() {
         </>
     )
 }
-
-export { Nav, Post }

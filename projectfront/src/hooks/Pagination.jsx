@@ -26,6 +26,7 @@ export default function Pagination({ totalItems, itemCountPerPage, pageCount, cu
                 </li>
                 {[...Array(pageCount)].map((_, i) => (
                     <>
+                    {/* start+ index 값이 총 페이지보다 작거나 같은 조건에서만 링크 생성 */}
                         {start + i <= totalPage && (
                             <li key={i}>
                                 <Link className={`${styles.page} ${currentPage === start + i && styles.active}`}

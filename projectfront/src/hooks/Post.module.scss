@@ -15,7 +15,8 @@
 
     .PostStateMid {
         height: 50%;
-
+        display: flex;
+        justify-content: space-between;
     }
 
     .PostStateBottom {
@@ -25,7 +26,5 @@
         justify-content: space-between;
 
         height: 25%;
-
-
     }
 }

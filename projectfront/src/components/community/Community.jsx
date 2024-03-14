@@ -3,6 +3,41 @@ import { useState, useEffect } from "react";
 import { PostNav, Post, Pagination } from '../../hooks';
 import { useSearchParams } from 'react-router-dom';
 
+const posts = [
+    {
+        id: 1,
+        writer: '푸니조',
+        createdAt: '2024-03-17-17pm',
+        title: '게시글 제목',
+        postTag: ['저메추', '점메추'].map(v => '#' + v).join(' '),
+        views: '12',
+        comments: '7',
+        likes: '15'
+    },
+    {
+        id: 2,
+        writer: '식스틴',
+        createdAt: '2024-03-17-17pm',
+        title: '게시글 제목',
+        postTag: ['아메추', '점메추'].map(v => '#' + v).join(' '),
+        views: '14',
+        comments: '8',
+        likes: '16'
+    },
+    {
+        id: 3,
+        writer: '돈슬람',
+        createdAt: '2024-03-17-17pm',
+        title: '게시글 제목',
+        postTag: ['저메추', '점메추'].map(v => '#' + v).join(' '),
+        views: '15',
+        comments: '10',
+        likes: '17'
+    },
+
+]
+
+// posts를 프롭스로 받기. 위가 예시
 export default function Community() {
     const [searchParams, setSearchParams] = useSearchParams();
     const page = searchParams.get('page');
@@ -39,17 +74,19 @@ export default function Community() {
                 </div>
             </div>
             <div className={styles.PostSection}>
-            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
-            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
-            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
-            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
-            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
-            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
-            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
-            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
-            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
-            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
-            <Post postWriter={'작성자'} postWrittenTime={'1시간 전'} postTitle={'제목'} postTag={'포스트태그'} views={'조회수'} comments={'댓글수'} likes={'좋아요'} />
+                {posts.map(post => (
+                    <Post
+                        id={post.id}
+                        postWriter={post.writer}
+                        createdAt={post.createdAt}
+                        postTitle={post.title}
+                        postTag={post.postTag}
+                        views={post.views}
+                        comments={post.comments}
+                        likes={post.likes}
+                    />
+                ))}
+
             </div>
             <Pagination
                 totalItems={100}

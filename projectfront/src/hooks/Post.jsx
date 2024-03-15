@@ -1,6 +1,14 @@
 import styles from './Post.module.scss'
 import { useState } from 'react'
-export default function Post({ id, postWriter, createdAt, postTitle, postTag, views, comments, likes }) {
+export default function Post({ 
+    id,
+    postWriter,
+    createdAt,
+    postTitle,
+    postTag,
+    views,
+    comments,
+    likes }) {
     // const [postWriter, setPostWriter] = useState('글쓴이')
     // const [createdAt, setCreatedAt] = useState('작성 시간')
     // const [postTitle, setPostTitle] = useState('글 제목')
@@ -19,7 +27,6 @@ export default function Post({ id, postWriter, createdAt, postTitle, postTag, vi
                 <div className={styles.PostStateMid}>
                     <h3>{postTitle}</h3>
                     <p>👁️‍🗨️{views} 📄{comments} 👍{likes}</p>
-
                 </div>
                 <div className={styles.PostStateBottom}>
                     <p className={styles.PostTag}>{postTag}</p>

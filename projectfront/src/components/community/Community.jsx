@@ -86,7 +86,6 @@ export default function Community() {
                         likes={post.likes}
                     />
                 ))}
-
             </div>
             <Pagination
                 totalItems={100}

@@ -1,9 +1,9 @@
 ## 코드 컨벤션
 
-함수명, 변수명, 브랜치명, 파일명 → camelCase
+함수명, 변수명, 브랜치명, → camelCase
     ㄴ 컴포넌트/훅 명 : function Component(){} // function Hook(){}
     ㄴ 상수 관련 파일 명 : 대문자로 작성 e.g) COUNT.jsx
-
+    ㄴ 파일명은 파스칼케이스
 ## 커밋 컨벤션
 
 컨벤션이름/#n(n번쨰커밋)/커밋내용기술

@@ -11,6 +11,7 @@ import HomePage from './pages/HomePage';
 import CommunityPage from './pages/CommunityPage';
 import Layout from './components/layout/Layout'
 import NotFoundPage from './pages/NotFoundPage';
+import EditPage from './pages/EditPage';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
       <Route element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="/community" element={<CommunityPage />} />
+        <Route path="/edit" element={<EditPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
       </Routes>

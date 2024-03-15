@@ -10,12 +10,18 @@ import {
 import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
 import CommunityPage from './pages/CommunityPage';
+import EditPage from './pages/EditPage';
 
+<link
+    rel="stylesheet"
+    href="https://unpkg.com/react-quill@1.3.3/dist/quill.snow.css"
+/>
 const router = createBrowserRouter([
   {
     path: '/', element: <App />, children: [
       { path: '/', element: <HomePage /> },
       { path: '/community', element: <CommunityPage /> },
+      { path: '/edit', element: <EditPage />},
       { path: '*', element: <NotFoundPage /> }
     ]
   }

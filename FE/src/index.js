@@ -12,6 +12,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import CommunityPage from './pages/CommunityPage';
 import EditPage from './pages/EditPage';
 import LoginPage from './pages/userPage/LoginPage';
+import SignUpPage from './pages/userPage/SignUpPage';
 
 <link
     rel="stylesheet"
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
       { path: '/community', element: <CommunityPage /> },
       { path: '/edit', element: <EditPage />},
       { path: '/login', element: <LoginPage />},
+      { path: '/signup', element: <SignUpPage />},
       { path: '*', element: <NotFoundPage /> }
     ]
   }

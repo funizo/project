@@ -18,14 +18,14 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.Main .PostOptions {
+.Main .PostNav {
   background-color: orange;
   height: 8dvh;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.Main .PostOptions button {
+.Main .PostNav button {
   border: none;
   cursor: pointer;
 }
@@ -38,27 +38,6 @@
 }
 .Main .PostSection {
   border: 2px solid black;
-}
-.Main .PostSection .Post {
-  background-color: green;
-  border: 1px solid white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 10px 0px;
-}
-.Main .PostSection .Post .PostStateTop {
-  background-color: aqua;
-  height: 25%;
-}
-.Main .PostSection .Post .PostStateMid {
-  height: 50%;
-}
-.Main .PostSection .Post .PostStateBottom {
-  background-color: pink;
-  display: flex;
-  justify-content: space-between;
-  height: 25%;
 }
 .Main .PageControl {
   justify-self: end;

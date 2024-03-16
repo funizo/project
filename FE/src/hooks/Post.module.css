@@ -1,0 +1,23 @@
+.Post {
+  background-color: green;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px 0px;
+}
+.Post .PostStateTop {
+  background-color: aqua;
+  height: 25%;
+}
+.Post .PostStateMid {
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.Post .PostStateBottom {
+  background-color: pink;
+  display: flex;
+  justify-content: space-between;
+  height: 25%;
+}/*# sourceMappingURL=Post.module.css.map */

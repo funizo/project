@@ -12,6 +12,7 @@ import CommunityPage from './pages/CommunityPage';
 import Layout from './components/layout/Layout'
 import NotFoundPage from './pages/NotFoundPage';
 import EditPage from './pages/EditPage';
+import LoginPage from './pages/userPage/LoginPage';
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
         <Route path="/edit" element={<EditPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </div>
   );

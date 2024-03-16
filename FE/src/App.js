@@ -13,7 +13,7 @@ import Layout from './components/layout/Layout'
 import NotFoundPage from './pages/NotFoundPage';
 import EditPage from './pages/EditPage';
 import LoginPage from './pages/userPage/LoginPage';
-
+import SignUpPage from './pages/userPage/SignUpPage';
 
 function App() {
 
@@ -46,6 +46,7 @@ function App() {
         <Route path="*" element={<NotFoundPage />} />
       </Route>
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
       </Routes>
     </div>
   );

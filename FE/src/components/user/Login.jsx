@@ -27,7 +27,7 @@ export default function Login() {
             </form>
 
             <div>
-                <button>회원가입</button>
+                <Link to="/signup">회원가입</Link>
                 <Link to="/">Home</Link>
             </div>
         </div>

@@ -42,7 +42,7 @@ export default function Announcement() {
     const page = searchParams.get('page');
 
     const mainCategory = '공지사항'
-    const description = '공지사항란입니다.'
+    const description = '공지사항입니다.'
 
     const [totalItems, setTotalItems] = useState(87)
     const paginationOption = {
@@ -52,10 +52,7 @@ export default function Announcement() {
     const totalPage = Math.ceil(totalItems / paginationOption.itemCountPerPage)
 
     const navPaths = [
-        { path: '/community', section: '전체보기' },
-        { path: '/community/newpost', section: '새 글 쓰기' },
-        { path: '/community/free', section: '자유 주제' },
-        { path: '/community/gathering', section: '모임&스터디' },
+        { path: '/announcement', section: '전체보기' },
     ];
 
     return (
@@ -69,7 +66,7 @@ export default function Announcement() {
                 <PostNav paths={navPaths} />
             </div>
             <div className={styles.PostSectionControl}>
-                <button onClick={() => window.location.replace('/community')}>🔄️</button>
+                <button onClick={() => window.location.replace('/announcement')}>🔄️</button>
                 <input placeholder='🔎게시글 검색' />
                 <div className={styles.PageControl}>
                     <div className={styles.PageControlBox}>
